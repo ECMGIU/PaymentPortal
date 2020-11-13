@@ -7,36 +7,44 @@
 
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="favicon.png" type="image/png"/>
     <link rel="stylesheet" href="css/dist.css"/>
     <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 
-<body class="overscroll-none">
+<body class="bg-blue-800">
 <div class="flex flex-col h-screen items-center justify-center antialiased text-gray-700">
-    <img class="w-1/4 m-4" src="ECMGLogo.png" alt="ECMG Logo">
+    <div class="bg-white rounded-lg border-2 border-blue-900 p-4 text-center shadow-lg">
 
-    <div class="font-bold text-gray-700 mt-4 text-2xl">ECMG PaymentPortal</div>
-    <div>Dues are due Monday, November 16th, 2020.</div>
+        <!--img class="w-40 mx-auto" src="ECMGLogo.png" alt="ECMG Logo"-->
 
-    <input id="IUEmail"
-           name="IUEmail"
-           type="text"
-           class="m-4 border rounded-md bg-gray-100 py-2 px-4 focus:outline-none text-gray-800 placeholder-gray-400"
-           placeholder="wbfletch@iu.edu">
+        <div class="mb-6">
+            <div class="font-bold text-2xl">ECMG PaymentPortal</div>
+            <div>Dues are due Monday, November 16th, 2020.</div>
+        </div>
 
-    <button data-checkout-mode="payment"
-            data-price-id="sku_GU4JYXyvvRb2sX"
-            class="bg-ecmg-dark p-2 px-4 rounded text-white uppercase text-xl shadow-md hover:shadow-lg transition ease-in-out duration-100 focus:outline-none"
-    >
-        <strong>Pay Dues</strong> // $15
-    </button>
-</div>
+        <div class="flex gap-2">
+            <input id="IUEmail"
+                   name="IUEmail"
+                   type="text"
+                   class="border-none rounded-md p-2 focus:outline-none bg-gray-200"
+                   placeholder="wbfletch@iu.edu">
 
-<div class="fixed bottom-0 w-full text-center p-4 text-xs text-gray-400">Created by <a href="//wadefletcher.com"
-                                                                                       class="underline">Wade
-    Fletcher</a> in 2020.
+            <button data-checkout-mode="payment"
+                    data-price-id="sku_GU4JYXyvvRb2sX"
+                    class="bg-ecmg-dark p-1 px-4 rounded text-white uppercase shadow-md hover:shadow-lg transition ease-in-out duration-100 focus:outline-none"
+            >
+                <strong>Pay Dues</strong> // $15
+            </button>
+        </div>
+    </div>
+
+    <div class="p-2 text-xs text-blue-400">
+        Created by
+        <a href="//wadefletcher.com" class="underline">Wade Fletcher</a>
+        in 2020.
+    </div>
 </div>
 
 
