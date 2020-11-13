@@ -1,0 +1,28 @@
+{
+  "name": "paymentportal",
+  "version": "1.0.0",
+  "description": "A payment portal for ECMG members to pay dues.",
+  "scripts": {
+    "build": "postcss css/tailwind.css -o css/dist.css",
+    "run": "npm run build && http-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ECMGIU/PaymentPortal.git"
+  },
+  "author": "Wade Fletcher",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ECMGIU/PaymentPortal/issues"
+  },
+  "homepage": "https://github.com/ECMGIU/PaymentPortal#readme",
+  "dependencies": {
+    "@tailwindcss/ui": "^0.7.2"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "postcss": "^8.1.7",
+    "postcss-cli": "^8.2.0",
+    "tailwindcss": "^1.9.6"
+  }
+}
