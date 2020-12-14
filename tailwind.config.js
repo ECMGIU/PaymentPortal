@@ -5,7 +5,10 @@ module.exports = {
         // removeDeprecatedGapUtilities: true,
         // purgeLayersByDefault: true,
     },
-    purge: [],
+    purge: {
+        enabled: true,
+        content: ['./**/*.html'],
+    },
     theme: {
         extend: {
             fontFamily: {
@@ -18,7 +21,5 @@ module.exports = {
         },
     },
     variants: {},
-    plugins: [
-        require('@tailwindcss/ui')
-    ]
+    plugins: []
 }
