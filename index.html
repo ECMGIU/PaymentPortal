@@ -29,10 +29,10 @@
                    name="IUEmail"
                    type="text"
                    class="border-none rounded-md p-2 focus:outline-none bg-gray-200"
-                   placeholder="wbfletch@iu.edu">
+                   placeholder="wbfletch@iu.edu"/>
 
             <button data-checkout-mode="payment"
-                    data-price-id="sku_GU4JYXyvvRb2sX"
+                    data-price-id=""
                     class="bg-ecmg-dark p-1 px-4 rounded text-white uppercase shadow-md hover:shadow-lg transition ease-in-out duration-100 focus:outline-none"
             >
                 <strong>Pay Dues</strong> // $15
@@ -49,38 +49,26 @@
 
 
 <script>
-    // Replace with your own publishable key: https://dashboard.stripe.com/test/apikeys
-    var PUBLISHABLE_KEY = 'pk_test_Tr8olTkdFnnJVywwhNPHwnHK00HkHV4tnP';
-    // Replace with the domain you want your users to be redirected back to after payment
-    var DOMAIN = location.href.replace(/[^/]*$/, '');
-
-    if (PUBLISHABLE_KEY === 'pk_test_Tr8olTkdFnnJVywwhNPHwnHK00HkHV4tnP') {
-        console.log(
-            'Replace the hardcoded publishable key with your own publishable key: https://dashboard.stripe.com/test/apikeys'
-        );
-    }
+    const PUBLISHABLE_KEY = 'pk_test_51HnBZdLQHE93FlPMNhHSC41qUktZWAHb1Rhr2KLgkgbAwsDGhZU4pWBAiu9ASAcaCFD994KuaOH2eirBr2G8miZt00gbJ2LSqu';
+    const DOMAIN = location.href.replace(/[^/]*$/, '');
 
     const stripe = Stripe(PUBLISHABLE_KEY);
 
     // Handle any errors from Checkout
-    var handleResult = function (result) {
+    const handleResult = function (result) {
         if (result.error) {
-            var displayError = document.getElementById('error-message');
+            let displayError = document.getElementById('error-message');
             displayError.textContent = result.error.message;
         }
     };
 
     document.querySelectorAll('button').forEach(function (button) {
         button.addEventListener('click', function (e) {
-            var mode = e.target.dataset.checkoutMode;
-            var priceId = e.target.dataset.priceId;
-            var items = [{price: priceId, quantity: 1}];
-
             // Make the call to Stripe.js to redirect to the checkout page
             // with the sku or plan ID.
             stripe.redirectToCheckout({
-                mode: mode,
-                lineItems: items,
+                mode: 'payment',
+                lineItems: [{ price: 'price_1Hy8IXLQHE93FlPM3f5DoQhp', quantity: 1 }],
                 successUrl:
                     DOMAIN + 'success.html?session_id={CHECKOUT_SESSION_ID}',
                 cancelUrl:

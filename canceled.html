@@ -1,58 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <title>Stripe Checkout Sample</title>
-    <meta name="description" content="A demo of Stripe client-only Checkout" />
+<head>
+    <meta charset="utf-8"/>
+    <title>ECMG PaymentPortal</title>
+    <meta name="description" content="A demo of Stripe client-only Checkout"/>
 
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" href="css/global.css" />
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+
+    <link rel="icon" href="favicon.png" type="image/png"/>
+    <link rel="stylesheet" href="css/dist.css"/>
+    <!-- Load Stripe.js on your website. -->
     <script src="https://js.stripe.com/v3/"></script>
-  </head>
+</head>
 
-  <body>
-    <div class="sr-root">
-      <div class="sr-main">
-        <header class="sr-header">
-          <a href="./" class="sr-header__logo"></a>
-        </header>
-        <div class="sr-payment-summary completed-view">
-          <h1>Your test payment was canceled</h1>
-          <h4>Checkout Session ID: <span id="session"></span></h4>
-        </div>
-      <div class="sr-content">
-        <div class="pasha-image-stack">
-          <img
-            src="https://picsum.photos/280/320?random=1"
-            width="140"
-            height="160"
-          />
-          <img
-            src="https://picsum.photos/280/320?random=2"
-            width="140"
-            height="160"
-          />
-          <img
-            src="https://picsum.photos/280/320?random=3"
-            width="140"
-            height="160"
-          />
-          <img
-            src="https://picsum.photos/280/320?random=4"
-            width="140"
-            height="160"
-          />
-        </div>
-      </div>
+<body class="bg-blue-800">
+<div class="flex flex-col h-screen items-center justify-center antialiased text-gray-700">
+    <div class="bg-white rounded-lg border-2 border-blue-900 p-4 text-center shadow-lg">
+        <h1 class="font-bold text-4xl mb-2">Oh no!</h1>
+        Your dues payment has been cancelled.
     </div>
-    <script>
-      var urlParams = new URLSearchParams(window.location.search);
 
-      if (urlParams.has("session_id")) {
-        document.getElementById("session").textContent = urlParams.get(
-          "session_id"
-        );
-      }
-    </script>
-  </body>
+    <div class="p-2 text-xs text-blue-400">
+        Created by
+        <a href="//wadefletcher.com" class="underline">Wade Fletcher</a>
+        in 2020.
+    </div>
+</div>
+</body>
 </html>
