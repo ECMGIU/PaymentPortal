@@ -13,7 +13,7 @@
     <script src="https://js.stripe.com/v3/"></script>
 </head>
 
-<body class="bg-blue-800">
+<body class="bg-blue-800 px-4">
 <div class="flex flex-col h-screen items-center justify-center antialiased text-gray-700">
     <div class="bg-white rounded-lg border-2 border-blue-900 p-4 text-center shadow-lg">
 
@@ -24,17 +24,14 @@
             <div>Dues are due Monday, November 16th, 2020.</div>
         </div>
 
-        <div class="flex gap-2">
+        <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0">
             <input id="IUEmail"
                    name="IUEmail"
                    type="text"
-                   class="border-none rounded-md p-2 focus:outline-none bg-gray-200"
+                   class="inline-block border-none rounded-md p-2 focus:outline-none bg-gray-200"
                    placeholder="wbfletch@iu.edu"/>
 
-            <button data-checkout-mode="payment"
-                    data-price-id=""
-                    class="bg-ecmg-dark p-1 px-4 rounded text-white uppercase shadow-md hover:shadow-lg transition ease-in-out duration-100 focus:outline-none"
-            >
+            <button class="inline-block bg-blue-500 p-1 px-4 rounded text-white uppercase shadow-md hover:shadow-lg transition ease-in-out duration-100 focus:outline-none">
                 <strong>Pay Dues</strong> // $15
             </button>
         </div>
@@ -68,7 +65,7 @@
             // with the sku or plan ID.
             stripe.redirectToCheckout({
                 mode: 'payment',
-                lineItems: [{ price: 'price_1Hy8IXLQHE93FlPM3f5DoQhp', quantity: 1 }],
+                lineItems: [{ price: 'price_1Hy93WLQHE93FlPMmp4XO3e3', quantity: 1 }],
                 successUrl:
                     DOMAIN + 'success.html?session_id={CHECKOUT_SESSION_ID}',
                 cancelUrl:
