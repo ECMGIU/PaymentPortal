@@ -46,7 +46,7 @@
 
 
 <script>
-    const PUBLISHABLE_KEY = 'pk_test_51HnBZdLQHE93FlPMNhHSC41qUktZWAHb1Rhr2KLgkgbAwsDGhZU4pWBAiu9ASAcaCFD994KuaOH2eirBr2G8miZt00gbJ2LSqu';
+    const PUBLISHABLE_KEY = 'pk_live_51HnBZdLQHE93FlPMct4wAVFSaS933TUtPuQTfbqmDLBarilNtsROy8x9yrFniMMfSbh4a3vMLjp5XGD0TFB9rtTm00COtaLl5f';
     const DOMAIN = location.href.replace(/[^/]*$/, '');
 
     const stripe = Stripe(PUBLISHABLE_KEY);
@@ -65,7 +65,7 @@
             // with the sku or plan ID.
             stripe.redirectToCheckout({
                 mode: 'payment',
-                lineItems: [{ price: 'price_1Hy93WLQHE93FlPMmp4XO3e3', quantity: 1 }],
+                lineItems: [{ price: 'price_1HzAvsLQHE93FlPMqT49vHN6', quantity: 1 }],
                 successUrl:
                     DOMAIN + 'success.html?session_id={CHECKOUT_SESSION_ID}',
                 cancelUrl:
