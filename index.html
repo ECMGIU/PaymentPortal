@@ -32,7 +32,7 @@
                    placeholder="wbfletch@iu.edu"/>
 
             <button class="inline-block bg-blue-500 p-1 px-4 rounded text-white uppercase shadow-md hover:shadow-lg transition ease-in-out duration-100 focus:outline-none">
-                <strong>Pay Dues</strong> // $15
+                <strong>Pay Dues</strong> // $20
             </button>
         </div>
     </div>
@@ -65,7 +65,7 @@
             // with the sku or plan ID.
             stripe.redirectToCheckout({
                 mode: 'payment',
-                lineItems: [{ price: 'price_1HzAvsLQHE93FlPMqT49vHN6', quantity: 1 }],
+                lineItems: [{ price: 'price_1IpxOwLQHE93FlPMnuYWHF3y', quantity: 1 }],
                 successUrl:
                     DOMAIN + 'success.html?session_id={CHECKOUT_SESSION_ID}',
                 cancelUrl:
