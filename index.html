@@ -21,7 +21,7 @@
 
         <div class="mb-6">
             <div class="font-bold text-2xl">ECMG PaymentPortal</div>
-            <div>Dues are due Wednesday, December 23rd, 2020.</div>
+            <div>Dues are due May 18th, 2021.</div>
         </div>
 
         <div class="flex flex-col md:flex-row md:space-x-2 space-y-2 md:space-y-0">
@@ -54,7 +54,6 @@
     // Handle any errors from Checkout
     const handleResult = function (result) {
         if (result.error) {
-            let displayError = document.getElementById('error-message');
             displayError.textContent = result.error.message;
         }
     };
